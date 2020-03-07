@@ -84,6 +84,7 @@ class FordFulkenson:
         '''
         The ford-fulkenson algorithm
         '''
+        self.readFile()
         path=self.BFS() #use BFS to find path from S to F
         total_flow=0 #the max_flow from S to F
         while(path!=None):
@@ -108,5 +109,4 @@ class FordFulkenson:
             path=self.BFS()
         self.write_to_file(max_flow=total_flow)
 graph=FordFulkenson()
-graph.readFile()
 graph.Ford_Fulkenson()
